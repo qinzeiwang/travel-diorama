@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "path": "source.jpg",
+    "sha256": "bd2760fc8f11250c60ca66888891921c4a933f5db0a0b92791843c16286185bc"
+  },
+  "observation": {
+    "inspected": true,
+    "scene_type": "林荫弯道",
+    "summary": "灰色沥青道路从前景向右后方弯曲；左侧高大树木和绿篱，后方局部建筑；右侧白护栏外是彩色步道。",
+    "light_weather": "白天，天空浅蓝灰，原图对比偏柔和；不额外添加夕阳、雨雪或戏剧性强光。",
+    "palette": [
+      "树木的绿色和少量黄绿色",
+      "灰色沥青",
+      "白色护栏",
+      "蓝白路灯",
+      "蓝、橙、紫色铺装"
+    ],
+    "uncertainties": [
+      "可能是校园或园区内部道路，具体地点无法仅凭照片确定。",
+      "不精确判断季节、树种或天气名称。"
+    ]
+  },
+  "anchors": [
+    {
+      "id": "road",
+      "label": "沥青弯道",
+      "position": "前景占主要面积，延伸至右后方",
+      "appearance": "灰色沥青、浅黄色虚线，右弯方向必须保留",
+      "required": true
+    },
+    {
+      "id": "trees",
+      "label": "高大树木与绿篱",
+      "position": "道路左侧及后方",
+      "appearance": "绿色冠层夹少量黄绿色，树干和连续修剪绿篱可辨",
+      "required": true
+    },
+    {
+      "id": "building",
+      "label": "树后局部建筑",
+      "position": "左后方，被树木遮挡",
+      "appearance": "浅色屋顶，蓝灰玻璃立面，只露出一部分",
+      "required": true
+    },
+    {
+      "id": "lamps",
+      "label": "蓝白色路灯",
+      "position": "道路左侧及后方沿线",
+      "appearance": "细长蓝白灯杆，蓝色斜伸灯臂",
+      "required": true
+    },
+    {
+      "id": "fence",
+      "label": "白色低护栏",
+      "position": "道路右边，随右弯延伸",
+      "appearance": "白色竖杆护栏与灰色支脚，不替换为石墙",
+      "required": true
+    },
+    {
+      "id": "path",
+      "label": "彩色步道",
+      "position": "护栏外侧，即画面右侧",
+      "appearance": "蓝、橙、紫色铺装，局部白色边线",
+      "required": true
+    },
+    {
+      "id": "bin",
+      "label": "蓝色垃圾桶",
+      "position": "中右方，护栏外侧步道附近",
+      "appearance": "蓝色竖向箱体，尺寸与护栏协调",
+      "required": true
+    },
+    {
+      "id": "car",
+      "label": "远处深色车辆",
+      "position": "最右后方，树旁局部可见",
+      "appearance": "深色车辆的一部分，低视觉权重",
+      "required": false
+    }
+  ],
+  "relations": [
+    {
+      "a": "road",
+      "relation": "右侧紧邻，边线和弯向一致",
+      "b": "fence"
+    },
+    {
+      "a": "fence",
+      "relation": "位于道路与彩色步道之间，步道在外侧",
+      "b": "path"
+    },
+    {
+      "a": "trees",
+      "relation": "位于前方并遮挡建筑的一部分",
+      "b": "building"
+    },
+    {
+      "a": "lamps",
+      "relation": "沿树列与道路方向排列，不跨到步道外侧",
+      "b": "trees"
+    },
+    {
+      "a": "bin",
+      "relation": "位于护栏外侧的步道附近，不放到车道中央",
+      "b": "path"
+    }
+  ],
+  "people": {
+    "status": "none_visible",
+    "count": 0,
+    "descriptions": []
+  },
+  "do_not_add": [
+    "海洋、沙滩、山海小镇或蓝顶教堂",
+    "新增游客、情侣、卡通小孩或动物",
+    "不在原图中的花墙、船只、吊牌、地图、护照和纪念文字",
+    "镜像主景或将道路改成向左弯",
+    "把彩色步道改成河流或水面",
+    "把被树遮挡的局部建筑扩展成新景区"
+  ],
+  "render": {
+    "container": "bottle",
+    "color": "bright",
+    "aspect_ratio": "3:4"
+  }
+}

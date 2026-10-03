@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "path": "",
+    "sha256": ""
+  },
+  "observation": {
+    "inspected": false,
+    "scene_type": "",
+    "summary": "",
+    "light_weather": "",
+    "palette": [],
+    "uncertainties": []
+  },
+  "anchors": [],
+  "relations": [],
+  "people": {
+    "status": "uncertain",
+    "count": null,
+    "descriptions": []
+  },
+  "do_not_add": [],
+  "render": {
+    "container": "bottle",
+    "color": "bright",
+    "aspect_ratio": "3:4"
+  }
+}

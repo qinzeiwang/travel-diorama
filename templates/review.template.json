@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "source_sha256": "",
+  "result_image": {
+    "path": "",
+    "sha256": ""
+  },
+  "reviewer": {
+    "kind": "human",
+    "viewed_source_and_result": false,
+    "note": ""
+  },
+  "checks": {
+    "source_match": {
+      "status": "unchecked",
+      "evidence": ""
+    },
+    "anchors_and_relations": {
+      "status": "unchecked",
+      "evidence": ""
+    },
+    "people": {
+      "status": "unchecked",
+      "evidence": ""
+    },
+    "container_integrity": {
+      "status": "unchecked",
+      "evidence": ""
+    },
+    "three_dimensionality": {
+      "status": "unchecked",
+      "evidence": ""
+    },
+    "color_and_materials": {
+      "status": "unchecked",
+      "evidence": ""
+    },
+    "no_extras": {
+      "status": "unchecked",
+      "evidence": ""
+    }
+  },
+  "anchor_checks": {}
+}
